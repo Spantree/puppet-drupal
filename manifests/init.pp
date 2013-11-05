@@ -30,7 +30,7 @@ class drupal (
     source   => 'https://github.com/drupal/drupal.git',
     revision => $tag,
     user     => 'vagrant',
-    require  => Package['git-core'],
+    require  => Package['git'],
   }
 
   # Clone Drush
@@ -41,7 +41,7 @@ class drupal (
     revision => '8.x-6.x',
     user     => 'vagrant',
     require  => [
-      Package['git-core'],
+      Package['git'],
       Vcsrepo[$install_location]
     ]
   }
