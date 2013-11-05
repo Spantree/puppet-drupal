@@ -29,7 +29,7 @@ class drupal (
     provider => git,
     source   => 'https://github.com/drupal/drupal.git',
     revision => $tag,
-    user     => 'vagrant'
+    user     => 'vagrant',
   }
 
   # Clone Drush
@@ -39,9 +39,7 @@ class drupal (
     source   => 'http://git.drupal.org/project/drush.git',
     revision => '8.x-6.x',
     user     => 'vagrant',
-    require  => [
-      Vcsrepo[$install_location]
-    ]
+    require  => Vcsrepo[$install_location],
   }
 
   # Make Drush executable
