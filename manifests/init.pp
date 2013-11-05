@@ -83,7 +83,7 @@ class drupal (
 
   exec { "touch ${install_location}/drush-run && yes | drush site-install ${site_install}":
     creates => "${install_location}/drush-run",
-    path    => ['bin', '/usr/bin', '/usr/local/bin'],
+    path    => ['/bin', '/usr/bin', '/usr/local/bin'],
     cwd     => $install_location,
     require => [
       Package['php'],
