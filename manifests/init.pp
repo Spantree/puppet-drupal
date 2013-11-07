@@ -81,7 +81,7 @@ class drupal (
 
   $site_install = "${a_m} ${a_n} ${a_p} ${c_u} ${d_p} ${d_s} ${d_s_p} ${d_u} ${l} ${s_m} ${s_n} ${s_s}"
 
-  exec { "touch ${install_location}/drush-run && yes | drush site-install ${install_location}":
+  exec { "touch ${install_location}/drush-run && yes | drush site-install ${site_install}":
     creates => "${install_location}/drush-run",
     path    => ['/bin', '/usr/bin', '/usr/local/bin'],
     cwd     => $install_location,
