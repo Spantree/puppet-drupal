@@ -1,3 +1,9 @@
+NOTE
+====
+
+I currently have to make a link between /var/www/html/drupal and /var/www/drupal manually. I'm sure this is an easy fix, but time constraints are causing this to be delayed.
+
+
 How to Use
 =========
 
