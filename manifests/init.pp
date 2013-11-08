@@ -38,7 +38,6 @@ class drupal (
     provider => git,
     source   => 'http://git.drupal.org/project/drush.git',
     revision => '8.x-6.x',
-    user     => 'vagrant',
     require  => Vcsrepo[$install_location],
   }
 
