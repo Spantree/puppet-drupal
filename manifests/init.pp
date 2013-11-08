@@ -29,7 +29,6 @@ class drupal (
     provider => git,
     source   => 'https://github.com/drupal/drupal.git',
     revision => $tag,
-    user     => 'vagrant',
   }
 
   # Clone Drush
